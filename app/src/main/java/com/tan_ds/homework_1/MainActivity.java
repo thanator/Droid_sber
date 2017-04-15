@@ -19,21 +19,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // mFirstAnimatedView = findViewById(R.id.first_animated_view);
+       mFirstAnimatedView = findViewById(R.id.anima_first);
        // mSecondAnimatedView = findViewById(R.id.second_animated_view);
 
 
         mAnimator = ValueAnimator.ofInt(0, 10000);
         mAnimator.setRepeatMode(ValueAnimator.REVERSE);
         mAnimator.setRepeatCount(ValueAnimator.INFINITE);
-        mAnimator.setDuration(1000);
-        mAnimator.setInterpolator(new DecelerateInterpolator());
+        mAnimator.setDuration(2000);
+        mAnimator.setInterpolator(new DecelerateInterpolator(2));
         mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator valueAnimator) {
                 Integer value = (Integer) valueAnimator.getAnimatedValue();
                 mFirstAnimatedView.getBackground().setLevel(value);
-                mSecondAnimatedView.getBackground().setLevel(value);
+                //mSecondAnimatedView.getBackground().setLevel(value);
             }
         });
         mAnimator.start();

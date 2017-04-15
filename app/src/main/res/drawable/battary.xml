@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:drawable="@drawable/border"
+        android:gravity="center"
+        android:width="105dp"
+        android:height="205dp"/>
+
+    <item
+        android:drawable="@drawable/mainindi_2"
+        android:gravity="center"
+        android:width="95dp"
+        android:height="195dp"
+        />
+
+    <item
+        android:width="100dp"
+        android:height="100dp"
+        android:gravity="center"
+        android:drawable="@drawable/flash"
+        />
+
+</layer-list>
